@@ -1,0 +1,48 @@
+.hero {
+  background: var(--bg);
+  padding: 72px 6vw 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  max-width: 780px;
+}
+
+.eyebrow {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  color: var(--red);
+  margin: 0 0 20px;
+}
+
+.h1 {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(52px, 9vw, 108px);
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 28px;
+}
+
+.line1 {
+  display: block;
+}
+
+.line2 {
+  display: block;
+}
+
+.red {
+  color: var(--red);
+}
+
+.sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 640px;
+  margin: 0;
+}

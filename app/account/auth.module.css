@@ -1,0 +1,62 @@
+.page {
+  min-height: 100vh;
+  padding-top: 74px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Graphic column (right) */
+.graphic {
+  position: relative;
+  background: #0a0a0d;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .graphic {
+    display: none;
+  }
+}
+
+.graphicGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.graphicGlow {
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 45, 32, 0.18), transparent 60%);
+}
+
+.graphicLabel {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+/* Form column (left) */
+.formCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 6vw;
+}

@@ -1,0 +1,114 @@
+.footer {
+  background: #070708;
+  border-top: 1px solid var(--line);
+  padding: 80px 0 0;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6vw 60px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.brandName {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.brandName span {
+  color: var(--red);
+}
+
+.brandDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 300px;
+  margin-bottom: 22px;
+}
+
+.brandContact {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 2;
+  color: #8a8a92;
+}
+
+/* Link columns */
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.colHead {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
+.colLink {
+  font-size: 15px;
+  color: #b6b6bd;
+  text-decoration: none;
+  padding: 7px 0;
+  transition: color 0.2s;
+}
+
+.colLink:hover {
+  color: #fff;
+}
+
+/* Legal bar */
+.legal {
+  border-top: 1px solid var(--line);
+}
+
+.legalInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 26px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #6a6a72;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .legalInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

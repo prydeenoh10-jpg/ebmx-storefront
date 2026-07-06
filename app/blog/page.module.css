@@ -1,0 +1,44 @@
+.page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-top: 74px;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 52px 6vw 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.featuredSection {}
+
+.sectionLabel {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--muted-2);
+  margin: 0 0 24px;
+}
+
+.gridSection {}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

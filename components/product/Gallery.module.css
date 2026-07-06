@@ -1,0 +1,86 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.main {
+  height: 540px;
+  background: #ececed center/contain no-repeat content-box;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.hiddenImg {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, #141417 0 14px, #1a1a1e 14px 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderLabel {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #3a3a44;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.thumb {
+  height: 96px;
+  background: #ececed center/contain no-repeat content-box;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.15s;
+  padding: 0;
+}
+
+.thumb:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.thumbActive {
+  border-color: var(--red);
+}
+
+.thumbLabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 4px 6px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 320px;
+  }
+
+  .thumb {
+    height: 72px;
+  }
+}

@@ -1,0 +1,149 @@
+.section {
+  background: var(--bg);
+  padding: 110px 0;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 52px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--red);
+  margin: 0 0 12px;
+}
+
+.h2 {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 64px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.badge {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.badgeStars {
+  color: var(--star);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.badgeScore {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1;
+}
+
+.badgeCount {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.card {
+  background: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(255, 45, 32, 0.3);
+}
+
+.stars {
+  color: var(--star);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.quote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin: 0;
+  flex: 1;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.reviewerName {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.reviewerLoc {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-top: 2px;
+}

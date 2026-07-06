@@ -1,0 +1,34 @@
+@keyframes mq {
+  to { transform: translateX(-50%); }
+}
+
+.bar {
+  background: var(--red);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.track {
+  display: inline-flex;
+  align-items: center;
+  animation: mq 26s linear infinite;
+  will-change: transform;
+}
+
+.item {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  padding: 9px 26px;
+  font-weight: 500;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: #0b0b0c;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}

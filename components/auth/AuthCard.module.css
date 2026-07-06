@@ -1,0 +1,150 @@
+.card {
+  background: #0e0e10;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 24px;
+  }
+}
+
+/* Logo */
+.logoMark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.logoE {
+  width: 36px;
+  height: 36px;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+}
+
+.logoText {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+/* Titles */
+.title {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 28px;
+  letter-spacing: 0.04em;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.label {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.input {
+  background: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 14px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--muted-2);
+}
+
+.input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.submit {
+  width: 100%;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, calc(100% - 14px) 100%, 0 100%);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: filter 0.15s;
+}
+
+.submit:hover {
+  filter: brightness(1.12);
+}
+
+/* Footer links */
+.footer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.authLink {
+  color: var(--red);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.authLink:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}

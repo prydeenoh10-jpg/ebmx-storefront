@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(6, 6, 7, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: fadeIn 0.25s ease both;
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(440px, 90vw);
+  background: var(--surface-2);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 38px;
+  overflow-y: auto;
+}
+
+.drawerHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.menuLabel {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--red);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border-top: none;
+  width: 100%;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.menuItem:hover {
+  color: var(--red);
+}
+
+.menuItem .arrow {
+  color: var(--red);
+  font-size: 18px;
+}
+
+.loginItem {
+  color: var(--red);
+}
+
+.loginItem .arrow {
+  color: var(--red);
+}
+
+.contact {
+  margin-top: 38px;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  line-height: 2;
+}

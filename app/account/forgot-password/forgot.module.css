@@ -1,0 +1,41 @@
+.sentCard {
+  background: #0e0e10;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.sentIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(46, 166, 75, 0.12);
+  border: 1px solid rgba(46, 166, 75, 0.3);
+  color: #2ea64b;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sentTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.sentText {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}

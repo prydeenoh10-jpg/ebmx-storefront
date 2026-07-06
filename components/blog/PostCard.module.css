@@ -1,0 +1,110 @@
+.card {
+  background: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(255, 45, 32, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Image */
+.img {
+  height: 200px;
+  background: #1a1a1e;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imgBg {
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .imgBg {
+  transform: scale(1.04);
+}
+
+.imgPlaceholder {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, #13131a 0 14px, #181820 14px 28px);
+}
+
+.catBadge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  background: rgba(11, 11, 12, 0.8);
+  color: var(--muted);
+  padding: 4px 8px;
+}
+
+/* Body */
+.body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+
+.title {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.excerpt {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+}
+
+.date {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted-2);
+  letter-spacing: 0.06em;
+}
+
+.readTime {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted-2);
+  letter-spacing: 0.06em;
+}

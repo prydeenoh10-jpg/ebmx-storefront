@@ -1,0 +1,44 @@
+.strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 26px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.label {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #6a6a72;
+}
+
+.platform {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #5d5d66;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    justify-content: center;
+    gap: 16px 24px;
+  }
+
+  .label {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,112 @@
+.section {
+  background: var(--red);
+  padding: 72px 0;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Left */
+.left {}
+
+.h2 {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 5vw, 56px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+/* Right */
+.right {}
+
+.form {
+  display: flex;
+  gap: 0;
+}
+
+.emailInput {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: #0b0b0c;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 14px;
+  padding: 18px 20px;
+  outline: none;
+  min-width: 0;
+}
+
+.emailInput::placeholder {
+  color: #9a9a9a;
+}
+
+.submitBtn {
+  background: #0b0b0c;
+  color: #fff;
+  border: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.submitBtn:hover {
+  background: #1a1a1e;
+}
+
+.privacy {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 12px 0 0;
+}
+
+.thanks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.thanksIcon {
+  font-size: 22px;
+  color: #fff;
+}
+
+.thanksText {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}

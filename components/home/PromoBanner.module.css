@@ -1,0 +1,107 @@
+.banner {
+  background: var(--red);
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 340px;
+  height: 340px;
+  border: 60px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 84px 6vw;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 18px;
+}
+
+.promise {
+  margin: 0;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 46px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ctaPrimary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: var(--red);
+  border: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 22px 28px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-decoration: none;
+  width: 100%;
+}
+
+.ctaPrimary:hover {
+  transform: translateX(6px);
+}
+
+.ctaGhost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 20px 28px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  width: 100%;
+}
+
+.ctaGhost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 60px 6vw;
+  }
+}

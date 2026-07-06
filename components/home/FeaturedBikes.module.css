@@ -1,0 +1,197 @@
+.section {
+  padding: 108px 0;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.header {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6vw 44px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.headerLeft {}
+
+.eyebrow {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--red);
+  margin: 0 0 12px;
+}
+
+.h2 {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(40px, 6vw, 72px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* Scroll track */
+.track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 6vw 16px;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bike card */
+.card {
+  flex: 0 0 360px;
+  scroll-snap-align: start;
+  background: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(255, 45, 32, 0.5);
+  transform: translateY(-4px);
+}
+
+.cardImg {
+  height: 300px;
+  background: #ececed center/contain no-repeat content-box;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 5px 10px;
+}
+
+.cardBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.cardSub {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cardName {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  margin: 0;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.chip {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--muted);
+  padding: 4px 8px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.priceCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wasPrice {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #8a8a92;
+  text-decoration: line-through;
+}
+
+.price {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #fff;
+  line-height: 1;
+}
+
+.priceRed {
+  color: var(--red);
+}
+
+.viewLink {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--red);
+}

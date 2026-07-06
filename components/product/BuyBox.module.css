@@ -1,0 +1,254 @@
+.buybox {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sub {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #8a8a92;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 4vw, 52px);
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  color: var(--star);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.ratingText {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Price */
+.priceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rrp {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.price {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 46px;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Stock */
+.stock {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.stockIn {
+  color: #7fd18a;
+}
+
+.stockOut {
+  color: #ff6b6b;
+}
+
+.financeNote {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.financeNote strong {
+  color: var(--text-2);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--line);
+}
+
+/* Qty + Add row */
+.addRow {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.qtyWrap {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  flex-shrink: 0;
+}
+
+.qtyBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.qtyBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.qtyNum {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 15px;
+  color: #fff;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.addBtn {
+  flex: 1;
+  height: 58px;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, calc(100% - 18px) 100%, 0 100%);
+  cursor: pointer;
+  transition: filter 0.15s, background 0.2s;
+}
+
+.addBtn:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+.addBtn:disabled {
+  background: #3a3a3f;
+  cursor: default;
+}
+
+.addBtnDone {
+  background: #2ea64b;
+}
+
+.buyNowBtn {
+  width: 100%;
+  height: 54px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-2);
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Trust */
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.trustDot {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 18px;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.tabBtn:hover {
+  color: var(--text-2);
+}
+
+.tabActive {
+  color: #fff;
+  background: rgba(255, 45, 32, 0.1);
+  border-bottom-color: var(--red);
+}
+
+.tabContent {
+  min-height: 80px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.description p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.noDesc {
+  color: var(--muted) !important;
+  font-style: italic;
+}

@@ -1,0 +1,232 @@
+.page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-top: 74px;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+
+.heroTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 64px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.heroSub {
+  font-family: var(--font-saira), 'Saira', sans-serif;
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 540px;
+  margin: 0 0 28px;
+}
+
+.heroContacts {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.heroPhone {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.heroPhone:hover {
+  color: var(--red);
+}
+
+.heroContactLink {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--red);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: opacity 0.15s;
+}
+
+.heroContactLink:hover {
+  opacity: 0.8;
+}
+
+/* Shared section heading */
+.sectionTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(24px, 3.5vw, 36px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 32px;
+  letter-spacing: -0.01em;
+}
+
+/* Resources */
+.resources {
+  padding: 64px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .resourceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resourceCard {
+  background: #0e0e10;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.resourceCard:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.resourceIcon {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.resourceTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.resourceNote {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.resourceArrow {
+  margin-left: auto;
+  font-size: 16px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* FAQ */
+.faq {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faqItem {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faqItem:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faqQ {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+
+.faqA {
+  font-family: var(--font-saira), 'Saira', sans-serif;
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Still stuck */
+.contact {
+  padding: 72px 0 100px;
+  text-align: center;
+}
+
+.contactTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 42px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+.contactSub {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 460px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, calc(100% - 12px) 100%, 0 100%);
+  transition: filter 0.15s;
+}
+
+.ctaBtn:hover {
+  filter: brightness(1.12);
+}

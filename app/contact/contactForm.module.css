@@ -1,0 +1,140 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.label {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.input,
+.select,
+.textarea {
+  background: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 13px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--muted-2);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239a9aa2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.select option {
+  background: #0e0e10;
+  color: #fff;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submit {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, calc(100% - 14px) 100%, 0 100%);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: filter 0.15s;
+}
+
+.submit:hover {
+  filter: brightness(1.12);
+}
+
+/* Sent state */
+.sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding: 48px 24px;
+  background: #0e0e10;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 300px;
+}
+
+.sentIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(46, 166, 75, 0.1);
+  border: 1px solid rgba(46, 166, 75, 0.3);
+  color: #2ea64b;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sentTitle {
+  font-family: var(--font-saira-condensed), 'Saira Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.sentText {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 380px;
+}
