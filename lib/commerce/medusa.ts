@@ -14,10 +14,11 @@ interface MVariant {
   manage_inventory?: boolean
 }
 interface MCat { id: string; name: string; handle: string; products_count?: number }
+interface MImage { url: string }
 interface MProd {
   id: string; title: string; handle: string | null
   description: string | null; thumbnail: string | null; status: string
-  variants?: MVariant[]; categories?: MCat[]
+  variants?: MVariant[]; categories?: MCat[]; images?: MImage[]
 }
 
 // --- Mapping helpers ---
@@ -53,7 +54,7 @@ function toProduct(p: MProd): Product {
     handle: p.handle ?? p.id,
     name: p.title,
     category: p.categories?.[0]?.name ?? 'Uncategorised',
-    image: p.thumbnail ?? '',
+    image: p.thumbnail ?? p.images?.[0]?.url ?? '',
     price,
     priceDisplay: fmtAud(price),
     wasPrice: null,
@@ -63,7 +64,7 @@ function toProduct(p: MProd): Product {
   }
 }
 
-const FIELDS = '*variants,*variants.prices,*categories,variants.inventory_quantity,variants.manage_inventory'
+const FIELDS = 'handle,thumbnail,*images,*variants,*variants.prices,*categories,variants.inventory_quantity,variants.manage_inventory'
 
 export const medusaAPI: CommerceAPI = {
   async getCollections(): Promise<Collection[]> {
@@ -118,10 +119,22 @@ export const medusaAPI: CommerceAPI = {
   },
 
   async getProduct(handle: string): Promise<Product | null> {
+    const params = new URLSearchParams({ handle, fields: FIELDS })
     const { products = [] } = await storeFetch<{ products: MProd[] }>(
-      `/store/products?handle=${encodeURIComponent(handle)}&fields=${FIELDS}`
+      `/store/products?${params.toString()}`
     )
-    return products[0] ? toProduct(products[0]) : null
+    if (products[0]) return toProduct(products[0])
+
+    // Fallback: if the grid fell back to product ID (null handle), fetch by ID
+    if (handle.startsWith('prod_')) {
+      const idParams = new URLSearchParams({ fields: FIELDS })
+      const res = await storeFetch<{ product: MProd }>(
+        `/store/products/${handle}?${idParams.toString()}`
+      ).catch(() => null)
+      if (res?.product) return toProduct(res.product)
+    }
+
+    return null
   },
 
   async searchProducts(q: string): Promise<Product[]> {
