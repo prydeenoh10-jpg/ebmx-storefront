@@ -116,9 +116,10 @@ export default function CheckoutClient() {
     setError(null)
     try {
       const result = await completeMedusaCart(medusaCartId)
-      if (result.type === 'order') {
+      if (result.type === 'order' && result.data) {
+        const order = result.data
         clearCart()
-        setOrderId(`#${result.data.display_id}`)
+        setOrderId(`#${order.display_id}`)
         setStep('complete')
       } else {
         throw new Error('Cart completion did not return an order.')
