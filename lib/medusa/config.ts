@@ -25,7 +25,7 @@ export async function storeFetch<T>(
   const res = await fetch(`${BACKEND}${path}`, {
     ...rest,
     headers: storeHeaders(rest.headers as Record<string, string>),
-    ...(noCache ? {} : { next: { revalidate: 60 } }),
+    ...(noCache ? {} : { next: { revalidate: 30 } }),
   })
   if (!res.ok) {
     const body = await res.text().catch(() => '')

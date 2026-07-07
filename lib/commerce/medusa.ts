@@ -33,7 +33,12 @@ function audPrice(variants?: MVariant[]): number | null {
 
 function inStock(variants?: MVariant[]): boolean {
   if (!variants?.length) return true
-  return variants.some(v => !v.manage_inventory || (v.inventory_quantity ?? 0) > 0)
+  return variants.some(v => {
+    if (!v.manage_inventory) return true
+    // inventory_quantity is a computed field — if the API didn't return it, assume in stock
+    if (v.inventory_quantity === undefined || v.inventory_quantity === null) return true
+    return v.inventory_quantity > 0
+  })
 }
 
 function fmtAud(n: number | null): string {
@@ -58,7 +63,7 @@ function toProduct(p: MProd): Product {
   }
 }
 
-const FIELDS = '*variants,*variants.prices,*categories'
+const FIELDS = '*variants,*variants.prices,*categories,variants.inventory_quantity,variants.manage_inventory'
 
 export const medusaAPI: CommerceAPI = {
   async getCollections(): Promise<Collection[]> {
