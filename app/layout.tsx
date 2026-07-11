@@ -7,6 +7,7 @@ import Marquee from '@/components/layout/Marquee'
 import Header from '@/components/layout/Header'
 import CartDrawer from '@/components/layout/CartDrawer'
 import Footer from '@/components/layout/Footer'
+import LiveChat from '@/components/layout/LiveChat'
 
 const saira = Saira({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <CartDrawer />
             <main>{children}</main>
             <Footer />
+            <LiveChat />
           </CartProvider>
         </AuthProvider>
       </body>
